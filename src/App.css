@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0d1117; /* Dark background */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: #ffffff;
+}
+
+.app-container {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 2rem;
+  min-height: 80vh;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(-45deg, #0d1117, #161b22, #21262d, #0d1117);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  transition: background 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 10px;
+}
+
+input {
+  padding: 12px;
+  font-size: 16px;
+  width: 60%;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background-color: #161b22;
+  color: #ffffff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+input:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #238636;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #2ea043;
+  box-shadow: 0 0 12px rgba(46, 160, 67, 0.6);
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 20px 30px;
+  margin-top: 20px;
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  text-align: left;
+  max-width: 350px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.weather-card h2 {
+  margin-bottom: 10px;
+}
+
+.weather-card p {
+  font-size: 18px;
+  margin: 6px 0;
+}
+
+.error {
+  margin-top: 15px;
+  color: #ff4d4f;
+  font-weight: bold;
+}
