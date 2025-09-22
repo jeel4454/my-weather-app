@@ -124,3 +124,19 @@ button:hover {
   color: #ff4d4f;
   font-weight: bold;
 }
+
+.weather-card .tem{
+  color: tomato;
+}
+
+.weather-card .hum {
+  color: skyblue;
+}
+
+.weather-card .con{
+  color: yellow;
+}
+
+.weather-card .wind{
+  color: wheat;
+}

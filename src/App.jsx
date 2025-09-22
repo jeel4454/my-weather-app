@@ -44,7 +44,6 @@ function App() {
     }
   };
 
-  // Load default weather (London) on first render
   useEffect(() => {
     getWeather(city);
   }, []);
@@ -72,11 +71,10 @@ function App() {
           <h2>
             {weather.name}, {weather.sys.country}
           </h2>
-          <img src="/weather.jpg" alt="Weather icon" />
-          <p>🌡️ Temperature: {Math.round(weather.main.temp)}°C</p>
-          <p>☁️ Condition: {weather.weather[0].description}</p>
-          <p>💧 Humidity: {weather.main.humidity}%</p>
-          <p>💨 Wind Speed: {(weather.wind.speed * 3.6).toFixed(1)} km/h</p>
+          <p className='tem'>🌡️ Temperature: {Math.round(weather.main.temp)}°C</p>
+          <p className='con'>☁️ Condition: {weather.weather[0].description}</p>
+          <p className='hum'>💧 Humidity: {weather.main.humidity}%</p>
+          <p className='wind'>💨 Wind Speed: {(weather.wind.speed * 3.6).toFixed(1)} km/h</p>
         </div>
       )}
     </div>
